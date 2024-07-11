@@ -1,6 +1,6 @@
 # FABRIO
 ## Features
-It is a webpage with all the information with inner pages which contains details of the domains.
+* It is a webpage with all the information with inner pages which contains details of the domains.
 It has main subpages of About, Home, Shop, Blog , Contact Us etc.
 With the help of home page redirect to inner page and can come back to the any of the page we want and know the details of everything.
 ## HTML And CSS
