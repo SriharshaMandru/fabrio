@@ -221,29 +221,24 @@
   } */
   nav {
     background-color: aliceblue;
-    width:100%;
+    width: 100%;
     display: flex;
     align-items: center; 
     padding: 10px 20px; 
-    position:fixed;
-    top:0;
+    position: fixed;
+    top: 0;
+    z-index: 1000; /* Ensure it is above other content */
 }
-.logo {
-    margin-left: 150px;
-}
-.logo p {
-    font-size: 35px;
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-}
+
 nav ul {
-    margin-left: 20px;
+    margin: 0;
+    padding: 0;
     list-style: none;
+    display: flex; /* Ensure list items are displayed in a row */
 }
 
 nav ul li {
-    display: inline-block;
-    margin-right: 20px; 
-    position: relative; 
+    position: relative; /* Necessary for the dropdown to be positioned correctly */
 }
 
 nav ul li a {
@@ -251,37 +246,41 @@ nav ul li a {
     font-size: 20px;
     font-weight: bold;
     text-decoration: none;
-    padding: 10px 15px; 
+    padding: 10px 15px;
     display: block;
-    
+}
+
+nav ul li ul {
+    display: none; /* Hide dropdown menu by default */
+    position: absolute;
+    top: 100%; /* Position it below the parent li */
+    left: 0; /* Align it with the left of the parent li */
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    z-index: 1000; /* Ensure it is above other content */
 }
 
 nav ul li:hover ul {
-    display: block; 
-}
-
-
-nav ul li ul {
-    display: none; 
-    position: absolute;
-    top: 100%; 
-    background-color: white;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+    display: block; /* Show dropdown menu when parent li is hovered */
 }
 
 nav ul li ul li {
-    width: 180px; 
+    width: 180px;
 }
 
 nav ul li ul li a {
-    font-size: 16px; 
-    padding: 10px 15px; 
-    display: block; 
+    font-size: 16px;
+    padding: 10px 15px;
+    display: block;
     white-space: nowrap;
 }
-a:active,a:hover{
+
+a:active, a:hover {
     text-decoration: underline; 
-    text-decoration-thickness:1px ;
+    text-decoration-thickness: 1px;
 }
 
 .end {
@@ -290,12 +289,20 @@ a:active,a:hover{
 
 .end ul {
     display: flex;
-    align-items: center; 
+    align-items: center;
 }
 
 .end ul li {
     margin-left: 20px;
 }
+.logo {
+    margin-left: 120px;
+}
+.logo p{
+    font-size: 35px;
+    color: black;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+} 
 .popup {
   width: 400px;
   height: 200px;
